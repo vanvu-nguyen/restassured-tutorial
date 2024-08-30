@@ -1,13 +1,13 @@
 package test.body;
 
-import test.untils.ProjectInfo;
+import test.untils.JiraAPI;
 
-public class JiraAPI {
+public class GetProjectIdByName {
     public static void main(String[] args) {
         String baseUri = "https://sdetvu.atlassian.net";
         String basePath = "/rest/api/3/project/SDET";
 
-        ProjectInfo projectInfo = new ProjectInfo(baseUri, basePath);
+        JiraAPI projectInfo = new JiraAPI(baseUri, basePath);
         projectInfo.getProjectIdByName("subtask");
     }
 }
