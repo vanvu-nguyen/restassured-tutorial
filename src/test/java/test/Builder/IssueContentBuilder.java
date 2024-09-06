@@ -4,7 +4,7 @@ import test.modal.IssueFields;
 
 public class IssueContentBuilder {
     private IssueFields issueFields;
-    public String build(String summary, String key, String id) {
+    public String build(String key, String id, String summary) {
         IssueFields.Project project = new IssueFields.Project(key);
         IssueFields.IssueType issuetype = new IssueFields.IssueType(id);
         IssueFields.Fields fields = new IssueFields.Fields(summary, project, issuetype);
