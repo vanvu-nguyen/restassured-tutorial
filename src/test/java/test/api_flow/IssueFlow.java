@@ -43,6 +43,7 @@ public class IssueFlow {
     }
 
     public void createIssue() {
+        System.out.println("-------------> CREATE <-------------");
         ProjectInfo projectInfo = new ProjectInfo(baseUri, projectKey);
         String taskTypeId = projectInfo.getIssueTypeId(issueTypeStr);
         String randomSummary = new Faker(new Locale("en")).name().title();
@@ -67,6 +68,7 @@ public class IssueFlow {
     }
 
     public void updateIssue(String issueStatusStr) {
+        System.out.println("-------------> UPDATE <-------------");
         String targetTransitionId = null;
         for (String transitionId: transitionTypeMap.keySet()) {
             if (transitionTypeMap.get(transitionId).equalsIgnoreCase(issueStatusStr)) {
@@ -91,6 +93,7 @@ public class IssueFlow {
     }
 
     public void deleteIssue() {
+        System.out.println("-------------> DELETE <-------------");
         String path = ISSUE_PATH_PREFIX + "/" + createdIssueKey;
         request.delete(path);
 
