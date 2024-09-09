@@ -14,7 +14,6 @@ public class BaseTest extends RequestCapability {
     protected String projectKey;
     protected String baseUri;
 
-
     @BeforeSuite
     public void beforeSuite() {
         encodedCredStr = AuthenticationHandler.encodedCredStr(EMAIL, TOKEN);

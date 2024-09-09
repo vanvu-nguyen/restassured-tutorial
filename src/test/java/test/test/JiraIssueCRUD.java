@@ -1,12 +1,7 @@
 package test.test;
 
-import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 import test.api_flow.IssueFlow;
-import test.modal.RequestCapability;
-import test.untils.AuthenticationHandler;
-
-import static io.restassured.RestAssured.given;
 
 public class JiraIssueCRUD extends BaseTest {
 
