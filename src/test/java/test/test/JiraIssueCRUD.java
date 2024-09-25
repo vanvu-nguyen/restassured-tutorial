@@ -35,5 +35,6 @@ public class JiraIssueCRUD extends BaseTest {
         IssueFlow issueFlow = new IssueFlow(request, baseUri, projectKey, "task");
         issueFlow.createIssue();
         issueFlow.deleteIssue();
+        System.out.println("1");
     }
 }
